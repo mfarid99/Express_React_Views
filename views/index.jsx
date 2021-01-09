@@ -1,6 +1,7 @@
 const React = require('react')
 const Other = require ('./other.jsx')
 const Photo = require ('./photo.jsx')
+const Sweet = require ('./sweet.jsx')
 
 
 const Index = (props) => {
