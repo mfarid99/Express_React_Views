@@ -18,3 +18,13 @@ app.get('/', (req, res) => {
 
 -static routes is when you specify what the route is such as ('/') for root or ('/ironman'). 
 -Other type of route is dynamic route and that is when we use params. 
+-It is easier to destructure the params
+
+-Express React Views uses React syntax to write server rendered pages
+-To set it up: npm install react react-dom
+-Copy the middleware code from express-react-views on get hub (https://github.com/reactjs/express-react-views) and paste in server.js
+-Create a folder called views where we will have all the JSX files
+-In the app.get, it should be res.render where you are telling express to render something. By default it looks in the views folder where the index file will be saved. As a second argument, you are passing it information to send to the browser. So, in this example we are telling it render the index view and pass it the object {ironman: 'Robert Downey Jr'} for its use
+ app.get('/', (req, res) => {
+    res.render('index', {ironman: 'Robert Downey Jr'});
+}) 

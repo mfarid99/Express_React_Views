@@ -2,9 +2,13 @@ const { response } = require('express');
 const express = require('express')
 const app = express();
 
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jsx');
+app.engine('jsx', require('express-react-views').createEngine());
+
 
 app.get('/', (req, res) => {
-    res.send(`hello world`);
+    res.render('index', {ironman: 'Robert Downey Jr'});
 }) 
 
 app.get('/ironman', (req, res)=> {
