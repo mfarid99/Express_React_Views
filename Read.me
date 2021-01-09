@@ -1,0 +1,20 @@
+-Make sure you have node and npm installed (node -v, npm -v)
+-npm init -y for package.json
+-npm install express express-react-views
+-Create server.js
+-require is a function inside of node that brings other files from node-modules ex: const express = require('express')
+-Express is mean to be a server for the developer. 
+-Use the listen function, in this case app.listen and specify a port such as Port 3000. The function allows the developer to pass a call back to execute when it loads up. 
+-At first you get Cannot GET / on the browser
+-When users send requests to our server, we need to define how our server responds by create a route
+-When users try to get info from your site, they are making a get request. So, the route that you set is the get route. You can set the app.get to the root and then pass a callback with 2 pieces of info 1) request object 2) response object. 
+-Here if the response goes to the root, send "Hello World"
+
+app.get('/', (req, res) => {
+    response.send(`hello world`);
+}) 
+
+-Middleware are actions that you want to happen before it hits the routes
+
+-static routes is when you specify what the route is such as ('/') for root or ('/ironman'). 
+-Other type of route is dynamic route and that is when we use params. 
